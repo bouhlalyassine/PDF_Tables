@@ -5,7 +5,7 @@ import streamlit as st
 import os
 import base64
 
-TITLE = "YB | Porfolio"
+TITLE = "PDF Tables"
 PAGE_ICON ="ico_potfolio.ico"
 
 
