@@ -12,12 +12,10 @@ PAGE_ICON ="ico_potfolio.ico"
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 
 
-# CSS
 css_file = current_dir / "main.css"
 
 
-# My Tutos :
-# size :
+# My Tuto :
 space = 15
 tuto_space = 70
 

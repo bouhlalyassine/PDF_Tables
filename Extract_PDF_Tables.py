@@ -12,8 +12,7 @@ st.set_page_config(page_title=TITLE,
     page_icon=PAGE_ICON,
     layout="wide")
 
-# --- LOAD CSS, PDF & PROFIL PIC ---
-with open(css_file) as f: # Load the CSS file
+with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 st.markdown("<h2 style=\
@@ -23,15 +22,13 @@ st.markdown("<h2 style=\
         Extract Tables from PDF</h2>", unsafe_allow_html=True)
 st.markdown("---")
 
-# st.sidebar.markdown("<br>", unsafe_allow_html=True)
-
 with st.sidebar :
     clickable_img_logo = get_img_with_href(pp_logo_portfolio, 'https://ybouhlal.streamlit.app/', 70, "blank")
     st.markdown(clickable_img_logo, unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    clickable_img = get_img_with_href(linkpic_code, 'https://github.com/bouhlalyassine/PDF_Tables',
+    clickable_img = get_img_with_href(linkpic_code, 'https://github.com/bouhlalyassine/Tables_PDF',
         170, "blank")
     st.markdown(clickable_img, unsafe_allow_html=True)
 
@@ -45,11 +42,9 @@ if uploaded_file2 :
             tables = tb.read_pdf(uploaded_file2, pages = "all")
 
         if len(tables)==0:
-            #msg_wrn_tbl.empty()
             st.error("No table detected")
 
         else :
-            #msg_wrn_tbl.empty()
             colpi1_t, colpi2_t, colpi3_t = st.columns([42, 16, 42])
 
             with colpi2_t:
